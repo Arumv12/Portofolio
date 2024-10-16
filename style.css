@@ -1,0 +1,117 @@
+/* Custom CSS */
+
+/* Mengatur margin agar tidak tertutupi sidebar */
+main {
+  margin-left: 200px;
+}
+
+/* Sidebar styling */
+aside h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff; /* Pastikan warna teks putih */
+}
+
+aside h2 {
+  font-size: 1rem;
+  color: #ffffff; /* Pastikan warna teks putih */
+}
+
+/* Navbar styling */
+aside .nav-link {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+  color: #ffffff; /* Warna teks navbar */
+}
+
+aside .nav-link:hover {
+  background-color: #ff6f61; /* Warna saat hover */
+  border-radius: 5px;
+}
+
+/* Card styling */
+.card {
+  background-color: #003366; /* Biru tua */
+  color: #fff;
+}
+
+.card-title {
+  color: #ff6f61;
+}
+
+.btn-primary {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+.btn-primary:hover {
+  background-color: #e55353;
+  border-color: #e55353;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  aside {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  main {
+    margin-left: 0;
+  }
+  .vh-100 {
+    height: auto;
+  }
+}
+
+/* Efek Teks Berjalan */
+.typing {
+  font-family: monospace; /* Jenis font monospace */
+  white-space: nowrap; /* Tidak ada pemutusan baris */
+  overflow: hidden; /* Menghindari teks yang meluap */
+  display: inline-block; /* Agar animasi berfungsi dengan baik */
+  animation: scrolling 10s linear infinite; /* Ubah durasi sesuai keinginan */
+}
+
+/* Efek Teks Berjalan */
+.typing {
+  font-family: monospace; /* Jenis font monospace */
+  white-space: nowrap; /* Tidak ada pemutusan baris */
+  overflow: hidden; /* Menghindari teks yang meluap */
+  display: inline-block; /* Agar animasi berfungsi dengan baik */
+}
+
+/* Animasi Teks Ketik */
+@keyframes typing {
+  from {
+    width: 0; /* Mulai dari lebar 0 */
+  }
+  to {
+    width: 100%; /* Berakhir di lebar penuh */
+  }
+}
+
+/* Efek Kursor Berkedip */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Kursor tidak terlihat */
+  }
+  50% {
+    border-color: transparent; /* Kursor terlihat */
+  }
+}
+
+/* Menghilangkan kursor */
+.typing::after {
+  content: ""; /* Konten kosong untuk menghindari kursor */
+}
+
+/* Moving Image Effect */
+/* .moving-image {
+  transition: transform 0.5s ease;
+}
+
+.moving-image:hover {
+  transform: scale(1.05); /* Slightly increases size on hover */

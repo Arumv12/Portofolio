@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Custom CSS */
+      /* Mengatur margin agar tidak tertutupi sidebar */
+      main {
+        margin-left: 200px;
+      }
+
+      /* Sidebar styling */
+      aside h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      aside h2 {
+        font-size: 1rem;
+        color: #ffffff;
+      }
+
+      /* Efek Teks Ketikan */
+      .typing {
+        font-family: monospace; /* Jenis font monospace */
+        white-space: wrap; /* Tidak ada pemutusan baris */
+        overflow: hidden; /* Menghindari teks yang meluap */
+        display: inline-block; /* Agar animasi berfungsi dengan baik */
+      }
+
+      /* Menghilangkan kursor */
+      .typing::after {
+        content: ""; /* Konten kosong untuk menghindari kursor */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside
+          class="col-md-3 col-lg-2 bg-dark text-white d-flex flex-column align-items-center position-fixed vh-100 p-4"
+        >
+          <img
+            src="image1.jpg"
+            class="rounded-circle img-fluid moving-image"
+            alt="Gambar Profil"
+            style="max-width: 150px; height: auto"
+          />
+          <h3 class="h4 mb-4 fw-bold text-center" style="font-size: 1.5rem">
+            Arum Vilia Putri
+          </h3>
+
+          <ul class="list-unstyled mb-4 text-center">
+            <li class="h6">
+              <strong>Phone:</strong><br />
+              +62 812 2591 6366
+            </li>
+            <li class="h6">
+              <strong>Email:</strong><br />
+              <a href="mailto:arumviliaa@gmail.com" class="text-white"
+                >arumviliaa@gmail.com</a
+              >
+            </li>
+          </ul>
+
+          <nav class="nav flex-column w-100 text-center">
+            <a class="nav-link text-secondary fw-bold" href="#about">About</a>
+            <a class="nav-link text-secondary fw-bold" href="#projects"
+              >Project</a
+            >
+            <a class="nav-link text-secondary fw-bold" href="#contact"
+              >Contact</a
+            >
+          </nav>
+        </aside>
+
+        <main class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+          <section id="about" class="py-5 bg-secondary text-white">
+            <div class="container">
+              <h2 class="mb-4 fw-bold">About Me</h2>
+              <p id="aboutText" class="typing"></p>
+              <!-- Paragraf dengan ID -->
+            </div>
+          </section>
+
+          <section id="projects" class="py-5">
+            <div class="container">
+              <h1 class="mb-4 fw-bold text-dark">Project</h1>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="card h-100">
+                    <img
+                      src="project1.png"
+                      class="card-img-top img-fluid moving-image"
+                      alt="Projek 1"
+                      style="object-fit: cover; height: 250px"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Web Kasir</h5>
+                      <p class="card-text text-center">
+                        This web cashier project is designed to improve
+                        efficiency and accuracy in the sales transaction process
+                        in stores. The system allows users, especially cashiers,
+                        to conduct buying and selling transactions easily and
+                        quickly.
+                      </p>
+                      <div class="text-center">
+                        <a href="#" class="btn btn-primary">Lihat Projek</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="py-5 bg-secondary text-white">
+            <div class="container">
+              <h2 class="mb-4 fw-bold">Contact Me</h2>
+              <form
+                action="mailto:emailanda@example.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message:</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p>&copy; 2024 Arum Vilia Putri. Semua hak cipta dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const text =
+        "Hello! I am Arum Vilia Putri, an active 5th-semester student in the Computer Science programat STMIK Amikom Surakarta. I have a keen interest in IT and programming languages. I have learned several programming languages, including PHP, CSS, Python, HTML, JavaScript, and more.";
+      let index = 0;
+
+      function typeText() {
+        if (index < text.length) {
+          document.getElementById("aboutText").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeText, 50); // Ubah 50 sesuai dengan kecepatan yang diinginkan (ms)
+        }
+      }
+
+      // Mulai efek ketikan saat halaman dimuat
+      window.onload = typeText;
+    </script>
+  </body>
+</html>
